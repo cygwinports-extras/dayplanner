@@ -1,0 +1,21 @@
+NAME="dayplanner"
+VERSION=0.11
+RELEASE=1
+CATEGORY="Office"
+SUMMARY="Day planner application"
+DESCRIPTION="Day Planner is a program designed to help you easily plan and
+manage your time. It can manage appointments, birthdays and more and makes
+sure you remember your appointments by displaying reminders."
+HOMEPAGE="http://www.day-planner.org/"
+SRC_URI="https://github.com/downloads/zerodogg/dayplanner/${NAME}-${VERSION}.tar.bz2"
+
+ARCH=noarch
+
+DIFF_EXCLUDES="*.desktop"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	cyginstall prefix=/usr
+}
